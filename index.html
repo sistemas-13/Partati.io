@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te quiero mucho</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff6f61, #ff4081, #7b1fa2);
+            background-size: 400% 400%;
+            animation: gradient-animation 8s ease infinite;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            color: white;
+            border: 3px solid #ff4081;
+        }
+        .heart {
+            font-size: 120px;
+            animation: pulse 1.5s infinite, rotate-heart 4s infinite linear;
+            margin-top: -40px;
+        }
+        .message {
+            font-size: 45px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeIn 3s ease-out;
+        }
+        .sub-message {
+            font-size: 28px;
+            margin-top: 15px;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeIn 4s ease-out forwards;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotate-heart {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <div class="message">¡Siempre estoy pensando en ti!</div>
+        <div class="sub-message">Te quiero mucho</div>
+    </div>
+</body>
+</html>
